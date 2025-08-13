@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Список клієнтів</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+  <header class="header">
+    <h3>Туристичне агенство "Мрія"</h3>
+    <h4>Відкриваємо для вас світ</h4>
+  </header>
+<form method="POST" class="col-md-12" action=""> 
+{% csrf_token %}
+{{form.as_p}}
+<button type="submit" class="btn btn-primary">Update</button>
+</body>
+<footer class="footer">
+  <div class="container">
+      <p>&copy; Сайт було створено студентами груп 6.04.121.010.20.3(Акулов Артем) та 6.04.122.010.20.3(Красулевська Анастасія, Софія Насонова)</p>
+  </div>
+</footer>
+</html>

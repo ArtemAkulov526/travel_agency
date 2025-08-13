@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Список продажів</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+
+  <header class="header">
+    <h3>Туристичне агенство "Мрія"</h3>
+    <h4>Відкриваємо для вас світ</h4>
+    <nav class="navbar">
+      <div class="navbar-links">
+          <a href="{% url 'customer_list' %}">Клієнти</a>
+          <a href="{% url 'services' %}">Послуги</a>
+      </div>
+  </nav>
+  </header>
+
+<h2 class="custom-heading">Продажі</h2>
+<div class="center">
+<table border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Ім'я</th>
+        <th>Телефон</th>
+        <th>Email</th>
+        <th>Вартість</th>
+        <th>Назва</th>
+        <th>Управління</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for customerorder in customerorders %}
+      <tr>
+        <td>{{ customerorder.id }}</td>
+        <td>{{ customerorder.customer.name }}</td>
+        <td>{{ customerorder.customer.phone }}</td>
+        <td>{{ customerorder.customer.email }}</td>
+        <td>{{ customerorder.cost }}</td>
+        <td>{{ customerorder.service.name }}</td>
+        <td> <a href={% url 'update_customerorders' customerorder.id %}><button type="button">Редагувати</button></a> 
+          <a href={% url 'deletecustomerorder' customerorder.id %}><button type="button">Видалити</button></a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<div class="button-container">
+  <a href=" {% url 'customer_order_new_form' %} " class="knopka"><button type="button">Новий запис</button></a>
+</div>
+</body>
+<footer class="footer">
+  <div class="container">
+      <p>&copy; Сайт було створено студентами груп 6.04.121.010.20.3(Акулов Артем) та 6.04.122.010.20.3(Красулевська Анастасія, Софія Насонова)</p>
+  </div>
+</footer>
+</html>

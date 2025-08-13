@@ -1,0 +1,90 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:beige;
+}
+
+.center{
+    margin: 0 auto; /* This will center the div horizontally */
+    margin-top: 30px; /* Adjust the value as needed to move the table lower */
+    margin-left: 550px; /* Adjust the value as needed to move the table lower */
+    align-items: center;
+    position: relative;
+}
+.center td{
+    width: 200px; /* Ширина ячеек */
+    height: 50px; /* Высота ячеек */
+    border: 1px solid black; /* Граница ячеек */
+}
+
+.custom-heading {
+    text-align: center;
+}
+.button-container {
+    text-align: center; /* This centers the buttons horizontally */
+    margin-top: 20px; /* Adjust the value as needed to move the table lower */
+    margin-left: 100px;
+}
+
+.knopka {
+    position: absolute;
+    text-align: center;
+    margin-right: 100px;
+}
+
+.header {
+    background-color: aqua;
+    color: black;
+    padding: 10px 20px; /* Add padding on the sides */
+    justify-content: space-between; /* Align items in header */
+    align-items: left; /* Center items vertically */
+}
+
+
+.header h3, .header h4 {
+    margin: 0; /* Remove default margin for h3 and h4 */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Align navbar to the right */
+    align-items: center;
+}
+
+.navbar-links {
+    margin-right: 20px;
+}
+
+.navbar-links a {
+    color: black;
+    text-decoration: none;
+    margin-left: 20px; /* Add left margin to create spacing between links */
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}
+
+.col-md-12{
+    margin: 0 auto; /* Center the form horizontally */
+    text-align: center; /* This centers the buttons horizontally */
+    height: 100%; 
+    width: 100%; 
+}
+
+.post-form label{
+    text-align: center; /* This centers the buttons horizontally */
+    display: block;
+    margin-bottom: 5px; /* Adjust as needed */
+}
+
+.footer {
+    background-color: #333; /* Цвет фона подвала */
+    color: #fff; /* Цвет текста подвала */
+    padding: 20px 0; /* Внутренние отступы сверху и снизу подвала */
+    text-align: center; /* Выравнивание текста по центру */
+    position: fixed; /* Фиксированная позиция подвала */
+    left: 0; /* Положение слева */
+    bottom: 0; /* Положение внизу */
+    width: 100%; /* Ширина подвала */
+}

@@ -1,0 +1,11 @@
+/myapp/__pycache__
+/myapp/migrations
+/myapp/__init__.py
+asgi.py
+settings.py
+wsgi.py
+db.sqlite3
+manage.py
+Скрины.docx
+/static
+/models.py
